@@ -104,8 +104,8 @@ const Registration = () => {
                 <title>TutorTrack || Registration</title>
             </Helmet>
 
-            <section className='px-4 xl:px-0'>
-                <div className='max-w-xl mx-auto mt-6 border-[1px] border-pink-700 p-2 rounded-md'>
+            <section className='px-4 xl:px-0 md:min-h-[100vh]'>
+                <div className='max-w-xl mx-auto mt-6 border-[1px] border-[#493D9E] p-2 rounded-md'>
                     <h2 className='text-2xl lg:text-4xl font-bold text-center mb-4'>Sign Up</h2>
                     <div>
                         <form onSubmit={handleUserRegister}>
@@ -199,7 +199,7 @@ const Registration = () => {
                             <div className='mt-2'>
                                 <button
                                     type='submit'
-                                    className='btn w-full bg-pink-700 hover:bg-pink-900 text-xl text-white'
+                                    className='btn w-full bg-gradient-to-r from-[#493D9E] to-[#B2A5FF] text-xl text-white'
                                 >
                                     Register
                                 </button>
@@ -223,7 +223,7 @@ const Registration = () => {
 
                         {/* sign in with google account */}
                         <div className='mt-3'>
-                            <Link onClick={() => { handleLoginWithGoogle() }} className='flex items-center gap-1 btn bg-slate-800 text-white hover:bg-slate-700'>
+                            <Link onClick={() => { handleLoginWithGoogle() }} className='flex items-center gap-1 btn bg-[#493D9E] text-white hover:bg-slate-700'>
                                 <FaGoogle className='text-2xl' /> Log in with Google Account
                             </Link>
                         </div>

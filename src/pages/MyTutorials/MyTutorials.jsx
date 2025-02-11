@@ -115,9 +115,9 @@ const MyTutorials = () => {
         <title>TutorTrack || My Tutorials</title>
       </Helmet>
 
-      <section className='max-w-7xl mx-auto'>
-        <div className="overflow-x-auto">
-          <table className="table">
+      <section className='max-w-7xl mx-auto '>
+        <div className="overflow-x-auto  md:min-h-[100vh]">
+          <table className="table ">
             {/* head */}
             <thead>
               <tr>

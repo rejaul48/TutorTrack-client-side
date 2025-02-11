@@ -78,12 +78,12 @@ const AddTutorials = () => {
         <title>TutorTrack || Add Tutorials</title>
       </Helmet>
 
-      <div className='bg-[#D8F8F2] text-center py-4 text-black'>
+      <div className='bg-[#B2A5FF] text-center py-4 text-black'>
         <h2 className='text-3xl font-bold'>Add tutorial</h2>
         <p>Fill-up this form carefully</p>
       </div>
 
-      <section className='max-w-5xl mx-auto px-4 xl:px-0'>
+      <section className='max-w-5xl mx-auto px-4 xl:px-0 md:min-h-[100vh]'>
         <form className='mt-6 mb-12' onSubmit={handleAddTutorial}>
 
           {/* here tutor name and email */}
@@ -168,7 +168,7 @@ const AddTutorials = () => {
           </label>
 
           <div>
-            <button type='submit' className='btn bg-pink-800 hover:bg-pink-600 w-full mt-5'>Submit</button>
+            <button type='submit' className='btn bg-gradient-to-r from-[#493D9E] to-[#B2A5FF] text-white w-full mt-5'>Submit</button>
           </div>
         </form>
       </section>

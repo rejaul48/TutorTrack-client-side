@@ -68,7 +68,7 @@ const MyBookedTutors = () => {
   // When no booked tutors are found
   if (!myBookedTutors || myBookedTutors.length === 0) {
     return (
-      <div className='flex h-[50vh] justify-center'>
+      <div className='flex md:min-h-[100vh] justify-center items-center'>
         <h2 className='flex items-center lg:text-5xl font-bold opacity-55 animate-bounce delay-300'>No Data Found...</h2>
       </div>
     );
@@ -81,7 +81,7 @@ const MyBookedTutors = () => {
         <title>TutorTrack || My Booked Tutor</title>
       </Helmet>
 
-      <section className='max-w-7xl mx-auto mt-8 px-4 xl:px-0'>
+      <section className='max-w-7xl mx-auto mt-8 px-4 xl:px-0 md:min-h-[100vh]'>
         <div className='grid  md:grid-cols-3 gap-4'>
           {myBookedTutors.map((tutor, index) => (
             <div className='border-2 p-4 text-center' key={tutor?._id}>
@@ -104,7 +104,7 @@ const MyBookedTutors = () => {
                   onClick={() => {
                     handleReviewIncrease(tutor?.tutorId, index, tutor?._id)
                   }}
-                  className='btn bg-teal-800 hover:bg-teal-700 text-white'
+                  className='btn bg-gradient-to-r from-[#493D9E] to-[#B2A5FF] hover:bg-[#493D9E] text-white'
                 >
                   Review
                 </button>

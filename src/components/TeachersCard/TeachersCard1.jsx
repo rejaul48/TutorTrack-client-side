@@ -49,7 +49,7 @@ const TeachersCard1 = ({ tutorData }) => {
                     </div>
 
                     <div className='mt-2'>
-                        <Link to={`/tutor/details/${tutorData?._id}`} className={`btn bg-black text-white hover:bg-pink-600 w-full lg:w-40 ${theme === 'dark' ? 'bg-pink-700 hover:bg-slate-600 hover:text-white' : ''}`}>Details</Link>
+                        <Link to={`/tutor/details/${tutorData?._id}`} className={`btn text-white hover:bg-pink-600 w-full lg:w-40 ${theme === 'dark' ? 'bg-gradient-to-r from-[#493D9E] to-[#B2A5FF] text-white' : 'bg-gradient-to-r from-[#493D9E] to-[#B2A5FF] text-white'}`}>Details</Link>
                     </div>
 
 

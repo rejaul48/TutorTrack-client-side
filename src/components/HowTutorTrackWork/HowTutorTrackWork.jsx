@@ -45,7 +45,7 @@ const HowTutorTrackWork = () => {
                     <p>Your tutor will guide the way through your first lesson and help you plan your next steps.</p>
 
                     <div>
-                        <img className='w-full h-[200px] md:h-[320px] p-4' src="https://i.imgur.com/dzdwCuW.jpeg" alt="photo1" />
+                        <img className='w-full h-[300px] md:h-[320px] p-4' src="https://i.imgur.com/dzdwCuW.jpeg" alt="photo1" />
                     </div>
 
                 </div>
@@ -58,7 +58,7 @@ const HowTutorTrackWork = () => {
 
 
                     <div className='w-full'>
-                        <img className='w-full h-[200px] md:h-[320px] p-4' src="https://i.imgur.com/oNd0JQ1.jpeg" alt="photo1" />
+                        <img className='w-full h-[300px] md:h-[320px] p-4' src="https://i.imgur.com/oNd0JQ1.jpeg" alt="photo1" />
                     </div>
 
 

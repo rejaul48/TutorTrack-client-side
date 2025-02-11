@@ -103,15 +103,18 @@ const Home = () => {
             </div>
 
             {/* Back to Top Button */}
-            <button
-                onClick={scrollToTop}
-                className="fixed bottom-8 right-8 w-12 h-12  bg-[#493D9E] text-white rounded-full shadow-lg hover:bg-[#B2A5FF] transition-all 
+           
+                <button
+                    onClick={scrollToTop}
+                    className="fixed bottom-8 right-8 w-12 h-12  bg-[#493D9E] text-white rounded-full shadow-lg hover:bg-[#B2A5FF] transition-all 
                 flex justify-center items-center
+                
                 "
-                aria-label="Back to top"
-            >
-                <BiSolidToTop className='text-2xl'/>
-            </button>
+                    aria-label="Back to top"
+                >
+                    <BiSolidToTop className='text-2xl' />
+                </button>
+           
 
         </>
     );

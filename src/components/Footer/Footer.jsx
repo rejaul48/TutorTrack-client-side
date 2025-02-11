@@ -72,7 +72,7 @@ const Footer = () => {
                     </div>
 
                     <div className="copyright bg-[#B2A5FF] py-4">
-                        <h2 className='text-center text-black text-xs md:text-lg'>All &copy;copyright are reserved by <a href="https://facebook.com/rejaulislam48" target='_blank' className='text-green-900'>Rejaul Islam Reja</a></h2>
+                        <h2 className='text-center text-black text-xs md:text-lg'>All &copy;copyright are reserved by <a href="https://facebook.com/rejaulislam48" target='_blank' className='text-[#493D9E]'>Rejaul Islam Reja</a></h2>
                     </div>
 
                 </div>
