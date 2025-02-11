@@ -4,6 +4,7 @@ import { FaArrowRightLong } from 'react-icons/fa6'
 import { CiLocationOn } from "react-icons/ci"
 import { MdEmail } from "react-icons/md"
 import { BiSolidToTop } from 'react-icons/bi'
+import { Helmet } from 'react-helmet'
 
 const ContactUs = () => {
 
@@ -17,6 +18,10 @@ const ContactUs = () => {
 
     return (
         <>
+
+            <Helmet >
+                <title>TutorTrack || Contact Us</title>
+            </Helmet>
 
             <main>
                 <section>
