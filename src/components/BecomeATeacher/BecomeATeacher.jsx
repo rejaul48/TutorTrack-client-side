@@ -11,13 +11,13 @@ const BecomeATeacher = () => {
     return (
         <>
 
-            <section className='max-w-7xl mx-auto md:flex md:h-[600px] mt-12 border-2 border-[#F2F6FD] mb-12 '>
+            <section className='max-w-7xl mx-auto md:flex md:h-[650px] mt-12 border-2 border-[#F2F6FD] mb-12 '>
 
                 <div className='md:w-6/12 h-[280px] md:h-full'>
-                    <img className='w-full h-full' src="https://i.imgur.com/QKgIdJ6.jpeg" alt="become-a-tutor-img" />
+                    <img className='w-full h-full' src="https://i.imgur.com/VewhFF3.jpeg" alt="become-a-tutor-img" />
                 </div>
 
-                <div className={`md:w-6/12 p-8 bg-[#B2A5FF] text-black`}>
+                <div className={`md:w-6/12 p-8 bg-gradient-to-t from-[#B2A5FF] to-transparent text-black`}>
                     <h2 className='lg:text-8xl font-semibold text-[#493D9E]'>Become a tutor</h2>
                     <p className='text-lg my-4'>Earn money sharing your expert knowledge with students. Sign up to start tutoring online with Preply.</p>
                     <ul className='list-disc ml-6'>

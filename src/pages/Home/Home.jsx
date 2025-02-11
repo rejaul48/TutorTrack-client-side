@@ -7,6 +7,7 @@ import BecomeATeacher from '../../components/BecomeATeacher/BecomeATeacher'
 import { Helmet } from 'react-helmet'
 import PremiumExperience from '../../components/PremiumExperience/PremiumExperience'
 import OurTutors from '../../components/OurTutors/OurTutors'
+import Testimonials from '../../components/Testimonials/Testimonials'
 
 const Home = () => {
     return (
@@ -70,6 +71,14 @@ const Home = () => {
                 {/* our tutors */}
                 <div>
                     <OurTutors ></OurTutors>
+                </div>
+
+            </section>
+
+            <section className='bg-[#B2A5FF] py-12 my-12'>
+                {/* testimonials section */}
+                <div className='max-w-7xl mx-auto'>
+                    <Testimonials ></Testimonials>
                 </div>
             </section>
 
