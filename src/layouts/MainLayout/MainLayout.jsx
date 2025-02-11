@@ -6,7 +6,7 @@ import Footer from '../../components/Footer/Footer'
 const Mainlayout = () => {
     return (
         <>
-            <div className='bg-[#FF7AAC] py-2 sticky top-0 z-50 h-auto'>
+            <div className='bg-[#F2F6FD] sticky top-0 z-50 h-auto'>
                 <Header ></Header>
             </div>
 

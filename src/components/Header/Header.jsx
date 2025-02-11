@@ -25,9 +25,25 @@ const Header = () => {
         <li>
             <NavLink
                 to="/"
+                // className={({ isActive }) =>
+                //     `btn border-none text-[15px] shadow-none rounded-md ${isActive ? 'border-b border-b-[#B2A5FF] text-white' : 'bg-transparent text-black'} hover:bg-black hover:bg-opacity-45 hover:text-white`
+                // }
+
                 className={({ isActive }) =>
-                    `btn border-none shadow-none rounded-md ${isActive ? 'bg-orange-400 text-white' : 'bg-transparent text-black'} hover:bg-black hover:bg-opacity-45 hover:text-white`
-                }>
+                    `btn border-transparent text-[15px] shadow-none rounded-md ${isActive  
+                        ? 'border-b-4 border-b-[#B2A5FF] text-black bg-transparent'
+                        : 'bg-transparent text-black border-b-2 border-transparent'
+                    } 
+
+
+                    hover:border-transparent
+                    hover:border-b-2 hover:border-b-[#B2A5FF] hover:bg-transparent`
+                }
+                
+                
+
+
+            >
                 Home
             </NavLink>
         </li>
@@ -35,8 +51,15 @@ const Header = () => {
             <NavLink
                 to="/find-tutors"
                 className={({ isActive }) =>
-                    `btn border-none shadow-none rounded-md ${isActive ? 'bg-orange-400 text-white' : 'bg-transparent text-black'} hover:bg-black hover:bg-opacity-45 hover:text-white`
-                }>
+                    `btn border-transparent text-[15px] shadow-none rounded-md ${isActive  
+                        ? 'border-b-4 border-b-[#B2A5FF] text-black bg-transparent'
+                        : 'bg-transparent text-black border-b-2 border-transparent'
+                    } 
+                    hover:border-transparent
+                    hover:border-b-2 hover:border-b-[#B2A5FF] hover:bg-transparent`
+                }
+
+            >
                 Find Tutors
             </NavLink>
         </li>
@@ -48,8 +71,15 @@ const Header = () => {
                     <NavLink
                         to="/add-tutorials"
                         className={({ isActive }) =>
-                            `btn border-none shadow-none rounded-md ${isActive ? 'bg-orange-400 text-white' : 'bg-transparent text-black'} hover:bg-black hover:bg-opacity-45 hover:text-white`
-                        }>
+                            `btn border-transparent text-[15px] shadow-none rounded-md ${isActive  
+                                ? 'border-b-4 border-b-[#B2A5FF] text-black bg-transparent'
+                                : 'bg-transparent text-black border-b-2 border-transparent'
+                            } 
+                            hover:border-transparent
+                            hover:border-b-2 hover:border-b-[#B2A5FF] hover:bg-transparent`
+                        }
+                        
+                        >
                         Add Tutorials
                     </NavLink>
                 </li>
@@ -57,8 +87,15 @@ const Header = () => {
                     <NavLink
                         to="/my-tutorials"
                         className={({ isActive }) =>
-                            `btn border-none shadow-none rounded-md ${isActive ? 'bg-orange-400 text-white' : 'bg-transparent text-black'} hover:bg-black hover:bg-opacity-45 hover:text-white`
-                        }>
+                            `btn border-transparent text-[15px] shadow-none rounded-md ${isActive  
+                                ? 'border-b-4 border-b-[#B2A5FF] text-black bg-transparent'
+                                : 'bg-transparent text-black border-b-2 border-transparent'
+                            } 
+                            hover:border-transparent
+                            hover:border-b-2 hover:border-b-[#B2A5FF] hover:bg-transparent`
+                        }
+                        
+                        >
                         My Tutorials
                     </NavLink>
                 </li>
@@ -66,10 +103,15 @@ const Header = () => {
                     <NavLink
                         to="/myBooked-tutors"
                         className={({ isActive }) =>
-                            `btn border-none shadow-none rounded-md ${isActive ? 'bg-orange-400 text-white' : 'bg-transparent text-black'} hover:bg-black hover:bg-opacity-45 hover:text-white`
-
-
-                        }>
+                            `btn border-transparent text-[15px] shadow-none rounded-md ${isActive  
+                                ? 'border-b-4 border-b-[#B2A5FF] text-black bg-transparent'
+                                : 'bg-transparent text-black border-b-2 border-transparent'
+                            } 
+                            hover:border-transparent
+                            hover:border-b-2 hover:border-b-[#B2A5FF] hover:bg-transparent`
+                        }
+                        
+                        >
                         My Booked Tutors
                     </NavLink>
                 </li>
@@ -86,7 +128,7 @@ const Header = () => {
 
             <div className='max-w-7xl mx-auto' >
                 <div className='text-center md:hidden'>
-                    <Link to={'/'} className={`text-2xl lg:text-4xl font-bold ${theme === 'dark' ? 'text-white' : 'text-black'}`}>TutorTrack</Link>
+                    <Link to={'/'} className={`text-2xl lg:text-4xl font-bold ${theme === 'dark' ? 'text-[#B2A5FF]' : 'text-[#B2A5FF]'}`}>TutorTrack</Link>
                 </div>
                 <div className="navbar ">
                     <div className="navbar-start">
@@ -113,7 +155,7 @@ const Header = () => {
                                 }
                             </ul>
                         </div>
-                        <Link to={'/'} className={`text-2xl lg:text-4xl font-bold ${theme === 'dark' ? 'text-white' : 'text-black'} hidden md:block`}>TutorTrack</Link>
+                        <Link to={'/'} className={`text-2xl lg:text-4xl font-bold bg-gradient-to-r from-[#493D9E] to-[#B2A5FF] bg-clip-text text-transparent hidden md:block`}>TutorTrack</Link>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1  ">
@@ -151,7 +193,7 @@ const Header = () => {
                             </div>
                         }
                         {
-                            user?.email ? <Link onClick={() => { userLogOut() }} className='btn px-3'>Logout</Link> : <Link to={'/login'} className='btn'>Login</Link>
+                            user?.email ? <Link onClick={() => { userLogOut() }}  className='btn bg-transparent border-[#9285E1] shadow-lg hover:bg-transparent '>Logout</Link> : <Link to={'/login'} className='btn bg-transparent border-[#9285E1] shadow-lg hover:bg-transparent '>Login</Link>
                         }
 
                     </div>
