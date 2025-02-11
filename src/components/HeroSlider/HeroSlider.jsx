@@ -10,6 +10,7 @@ import 'swiper/css/scrollbar';
 import { FaArrowRight, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { useContext } from 'react';
 import { TutorContext } from '../../contextApi/TutorContext';
+import { Link } from 'react-router-dom';
 
 const HeroSlider = () => {
   const { theme } = useContext(TutorContext);
@@ -73,9 +74,9 @@ const HeroSlider = () => {
                     <p className={`w-9/12 lg:w-10/12 md:text-[16px] my-3 text-black`}>
                       {slider.description}
                     </p>
-                    <a href="#service" className="btn  bg-gradient-to-r from-[#493D9E] to-[#B2A5FF] text-white mt-5 text-xl md:text-lg border-none px-8 md:px-10 md:h-[55px] rounded-lg hover:bg-opacity-50">
+                    <Link to={'/find-tutors'} href="#service" className="btn  bg-gradient-to-r from-[#493D9E] to-[#B2A5FF] text-white mt-5 text-xl md:text-lg border-none px-8 md:px-10 md:h-[55px] rounded-lg hover:bg-opacity-50">
                       Get Started <FaArrowRight />
-                    </a>
+                    </Link>
                   </div>
                 </div>
 

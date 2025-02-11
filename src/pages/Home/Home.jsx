@@ -5,6 +5,8 @@ import DifferentTutors from '../../components/DifferentTutors/DifferentTutors'
 import HowTutorTrackWork from '../../components/HowTutorTrackWork/HowTutorTrackWork'
 import BecomeATeacher from '../../components/BecomeATeacher/BecomeATeacher'
 import { Helmet } from 'react-helmet'
+import PremiumExperience from '../../components/PremiumExperience/PremiumExperience'
+import OurTutors from '../../components/OurTutors/OurTutors'
 
 const Home = () => {
     return (
@@ -59,11 +61,21 @@ const Home = () => {
             <section className='max-w-7xl mx-auto'>
                 <h2 className='lg:text-5xl font-bold mt-24 mb-8 px-2 xl:px-0'>How TutorTrack Works:</h2>
                 <HowTutorTrackWork ></HowTutorTrackWork>
+
+                {/* premium experience */}
+                <div>
+                    <PremiumExperience ></PremiumExperience>
+                </div>
+
+                {/* our tutors */}
+                <div>
+                    <OurTutors ></OurTutors>
+                </div>
             </section>
 
             {/* lesson Guaranteed section */}
 
-            <section className='bg-[#FF7AAC] py-6 md:py-12 mt-12'>
+            <section className='bg-[#F2F6FD] py-6 md:py-12 mt-12'>
                 <div className='max-w-7xl mx-auto text-center text-black'>
                     <h2 className='text-3xl lg:text-7xl font-bold'>Lessons you'll love. Guaranteed.</h2>
                     <p className='text-sm lg:text-lg mt-5'>Try another tutor for free if you're not satisfied.</p>

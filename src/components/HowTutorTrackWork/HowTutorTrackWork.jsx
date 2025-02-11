@@ -4,11 +4,11 @@ import { FaGraduationCap, FaLanguage, FaStar } from 'react-icons/fa'
 const HowTutorTrackWork = () => {
     return (
         <>
-            <section className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 px-2 xl:px-0 lg:grid-cols-3 gap-6 pb-5'>
+            <section className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 px-2 xl:px-0 lg:grid-cols-3 gap-6 '>
 
                 {/* card no 1 */}
                 <div className='border-[1px] border-black p-4 rounded-lg '>
-                    <h3 className='lg:text-3xl font-bold bg-[#7BEAD6] px-4 py-2 w-[45px] rounded-lg'>1</h3>
+                    <h3 className='lg:text-3xl font-bold text-white bg-[#9da3ac] px-4 py-2 w-[45px] rounded-lg'>1</h3>
                     <h2 className='lg:text-4xl font-bold my-3'>Find Your Tutor.</h2>
                     <p>We'll connect you with a tutor who will motivate, challenge, and inspire you.</p>
 
@@ -40,7 +40,7 @@ const HowTutorTrackWork = () => {
 
                 {/* card no 2 */}
                 <div className='border-[1px] border-black p-4 rounded-md'>
-                    <h3 className='lg:text-3xl font-bold bg-[#FFE03D] px-4 py-2 w-[45px] rounded-lg'>2</h3>
+                    <h3 className='lg:text-3xl text-white font-bold bg-[#B2A5FF] px-4 py-2 w-[45px] rounded-lg'>2</h3>
                     <h2 className='lg:text-4xl font-bold my-3'>Start Learning.</h2>
                     <p>Your tutor will guide the way through your first lesson and help you plan your next steps.</p>
 
@@ -52,7 +52,7 @@ const HowTutorTrackWork = () => {
 
                 {/* card no 3 */}
                 <div className='border-[1px] border-black p-4 rounded-md'>
-                    <h3 className='lg:text-3xl font-bold bg-[#2885FD] px-4 py-2 w-[45px] rounded-lg'>3</h3>
+                    <h3 className='lg:text-3xl text-white font-bold bg-[#493D9E] px-4 py-2 w-[45px] rounded-lg'>3</h3>
                     <h2 className='lg:text-4xl font-bold my-3'>Speak. Read. Write. Repeat.</h2>
                     <p>Choose how many lessons you want to take each week and get ready to reach your goals!</p>
 

@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { TutorContext } from '../../contextApi/TutorContext'
 import axios from 'axios'
 import ThemeToggle from '../ThemeToggle/ThemeToggle'
+import { FaArrowRightToBracket } from 'react-icons/fa6'
 
 const Header = () => {
 
@@ -193,7 +194,7 @@ const Header = () => {
                             </div>
                         }
                         {
-                            user?.email ? <Link onClick={() => { userLogOut() }}  className='btn bg-transparent border-[#9285E1] shadow-lg hover:bg-transparent '>Logout</Link> : <Link to={'/login'} className='btn bg-transparent border-[#9285E1] shadow-lg hover:bg-transparent '>Login</Link>
+                            user?.email ? <Link onClick={() => { userLogOut() }}  className='btn bg-transparent border-[#9285E1] shadow-lg hover:bg-transparent '>Logout</Link> : <Link to={'/login'} className='btn bg-transparent border-[#9285E1] shadow-lg hover:bg-transparent '><FaArrowRightToBracket /> Login</Link>
                         }
 
                     </div>
