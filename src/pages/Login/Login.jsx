@@ -1,3 +1,5 @@
+
+
 import React, { useContext, useState } from 'react';
 import { FaGoogle, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -5,15 +7,15 @@ import useLoginWithGoogle from '../../hooks/useLoginWithGoogle';
 import { TutorContext } from '../../contextApi/TutorContext';
 import { Helmet } from 'react-helmet';
 import Swal from 'sweetalert2';
-
+import { HiOutlineLightBulb } from "react-icons/hi";
 
 const Login = () => {
-
-    // login with google
+    // Login with Google
     const { handleLoginWithGoogle } = useLoginWithGoogle();
-    // get context method from TutorContext
-    const { registerUserLogin, setUser } = useContext(TutorContext)
+    // Get context method from TutorContext
+    const { registerUserLogin, setUser } = useContext(TutorContext);
 
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
@@ -21,35 +23,25 @@ const Login = () => {
         setIsPasswordVisible((prevState) => !prevState);
     };
 
-    // find user location
-    const location = useLocation()
-    const navigate = useNavigate()
+    // Find user location
+    const location = useLocation();
+    const navigate = useNavigate();
 
+    const handleRegisterUserLogin = (e) => {
+        e.preventDefault();
 
-    const handleRegisterUserLogin = e => {
-        // stop default behavior
-        e.preventDefault()
-        const form = e.target;
-
-        const email = form.email.value;
-        const password = form.password.value;
-
-        const login = { email, password }
-        console.log(login)
-
-        // login user check credential from firebase
+        // Login user check credentials from Firebase
         registerUserLogin(email, password)
-            .then(result => {
-                console.log(result)
+            .then((result) => {
                 Swal.fire({
                     title: "Login Successful!",
                     icon: "success",
                     draggable: true
                 });
-                setUser(result.user)
+                setUser(result.user);
                 navigate(location?.state ? location.state : '/');
             })
-            .catch(err => {
+            .catch(() => {
                 Swal.fire({
                     position: "top-center",
                     icon: "error",
@@ -57,27 +49,34 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-            })
+            });
+    };
 
-
-    }
-
+    // Autofill credentials on button click
+    const autofillCredentials = () => {
+        setEmail("rejaul.admin@gmail.com");
+        setPassword("AdminPass");
+    };
 
     return (
         <>
-
-            <Helmet >
+            <Helmet>
                 <title>TutorTrack || Login Page</title>
             </Helmet>
 
             <section className='px-4 xl:px-0 md:min-h-screen'>
                 <div className='max-w-xl mx-auto mt-6 border-[1px] border-[#B2A5FF] p-2 rounded-md'>
                     <h2 className='lg:text-4xl font-bold text-center m2-4'>Welcome Back</h2>
-                    <p className='text-center text-2xl font-bold mb-4'>Login</p>
-                    <div >
-                        <form onSubmit={handleRegisterUserLogin}>
 
-                            {/* user email */}
+                    <div className='flex justify-between mr-6'>
+                        <p></p>
+                        {/* Click Me button */}
+                        <button onClick={autofillCredentials} className="btn bg-[#B2A5FF] text-white  rounded flex items-center justify-center hover:bg-[#493D9E]">Hint <HiOutlineLightBulb className='text-xl'/></button>
+                    </div>
+
+                    <div>
+                        <form onSubmit={handleRegisterUserLogin}>
+                            {/* User email */}
                             <div>
                                 <label className="form-control w-full">
                                     <div className="label">
@@ -86,13 +85,15 @@ const Login = () => {
                                     <input
                                         type="email"
                                         name='email'
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
                                         placeholder="Your email here.."
                                         className="input input-bordered w-full"
                                     />
                                 </label>
                             </div>
 
-                            {/* user password */}
+                            {/* User password */}
                             <div>
                                 <label className="form-control w-full">
                                     <div className="label">
@@ -118,7 +119,7 @@ const Login = () => {
                                 </label>
                             </div>
 
-                            {/* submit button */}
+                            {/* Submit button */}
                             <div className='mt-2'>
                                 <button
                                     type='submit'
@@ -128,29 +129,28 @@ const Login = () => {
                             </div>
                         </form>
 
-                        {/* i have an account */}
+                        {/* I have an account */}
                         <div>
                             <p className='text-center mt-2'>
-                                I don't have any account? <Link to={'/register'} className='hover:underline'>Register</Link>
+                                I don't have an account? <Link to={'/register'} className='hover:underline'>Register</Link>
                             </p>
                         </div>
-                        {/* divider */}
+
+                        {/* Divider */}
                         <div className='mt-4'>
                             <div className="flex w-full flex-col">
                                 <div className="divider">other's login method</div>
                             </div>
                         </div>
 
-                        {/* sign in with google account */}
+                        {/* Sign in with Google */}
                         <div className='mt-3'>
-                            <Link onClick={() => { handleLoginWithGoogle() }} className='flex items-center gap-1 btn bg-[#493D9E] text-white hover:bg-slate-700'>
-                                <FaGoogle className='text-2xl'></FaGoogle> Log in with Google Account
+                            <Link onClick={handleLoginWithGoogle} className='flex items-center gap-1 btn bg-[#493D9E] text-white hover:bg-slate-700'>
+                                <FaGoogle className='text-2xl' /> Log in with Google Account
                             </Link>
                         </div>
-
                     </div>
                 </div>
-
             </section>
         </>
     );
