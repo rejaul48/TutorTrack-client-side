@@ -32,19 +32,22 @@ const Home = () => {
                     <h2 className='text-sm lg:text-3xl font-bold'><span>120</span>+</h2>
                     <p className='text-xs md:text-lg font-semibold'>Subjects taught</p>
                 </div>
-                <div className='text-center space-y-1'>
+                <div className='hidden lg:block text-center space-y-1'>
                     <h2 className='text-sm lg:text-3xl font-bold'><span>180</span>+</h2>
                     <p className='text-xs md:text-lg font-semibold'>Tutor nationalities</p>
                 </div>
-                <div className=' flex flex-col items-center justify-center space-y-1'>
-                    <h2 className='text-sm md:lg:text-3xl font-bold flex items-center gap-2'>4.8 <span className='flex items-center gap-1'>
-                        <FaStar className='text-sm md:text-xl'></FaStar>
-                        <FaStar className='text-sm md:text-xl'></FaStar>
-                        <FaStar className='text-sm md:text-xl'></FaStar>
-                        <FaStar className='text-sm md:text-xl'></FaStar>
-                        <FaStar className='text-sm md:text-xl'></FaStar>
-                    </span></h2>
-                    <p className='text-xs md:text-lg font-semibold'>on the App Store</p>
+
+                <div className='hidden lg:block'>
+                    <div className='  flex flex-col items-center justify-center space-y-1'>
+                        <h2 className='text-sm md:lg:text-3xl font-bold flex items-center gap-2'>4.8 <span className='flex items-center gap-1'>
+                            <FaStar className='text-sm md:text-xl'></FaStar>
+                            <FaStar className='text-sm md:text-xl'></FaStar>
+                            <FaStar className='text-sm md:text-xl'></FaStar>
+                            <FaStar className='text-sm md:text-xl'></FaStar>
+                            <FaStar className='text-sm md:text-xl'></FaStar>
+                        </span></h2>
+                        <p className='text-xs md:text-lg font-semibold'>on the App Store</p>
+                    </div>
                 </div>
             </section>
 
