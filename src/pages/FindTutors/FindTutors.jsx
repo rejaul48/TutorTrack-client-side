@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import TeachersCard1 from '../../components/TeachersCard/TeachersCard1';
 import { useLoaderData } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { BiSolidToTop } from 'react-icons/bi';
 
 
 const FindTutors = () => {
@@ -25,7 +26,15 @@ const FindTutors = () => {
     setFilteredTutors(results);
   }, [searchTerm, allTutorsData]);
 
-  // Render the search bar and tutors list
+
+  // Function to scroll back to the top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <>
 
@@ -72,6 +81,18 @@ const FindTutors = () => {
           </p>
         )}
       </section>
+
+      {/* Back to Top Button */}
+      <button
+        onClick={scrollToTop}
+        className="fixed bottom-8 right-8 w-12 h-12  bg-[#493D9E] text-white rounded-full shadow-lg hover:bg-[#B2A5FF] transition-all 
+                flex justify-center items-center
+                "
+        aria-label="Back to top"
+      >
+        <BiSolidToTop className='text-2xl' />
+      </button>
+
     </>
   );
 };

@@ -26,12 +26,8 @@ const Header = () => {
         <li>
             <NavLink
                 to="/"
-                // className={({ isActive }) =>
-                //     `btn border-none text-[15px] shadow-none rounded-md ${isActive ? 'border-b border-b-[#B2A5FF] text-white' : 'bg-transparent text-black'} hover:bg-black hover:bg-opacity-45 hover:text-white`
-                // }
-
                 className={({ isActive }) =>
-                    `btn border-transparent text-[15px] shadow-none rounded-md ${isActive  
+                    `btn border-transparent text-sm shadow-none rounded-md ${isActive
                         ? 'border-b-4 border-b-[#B2A5FF] text-black bg-transparent'
                         : 'bg-transparent text-black border-b-2 border-transparent'
                     } 
@@ -40,8 +36,8 @@ const Header = () => {
                     hover:border-transparent
                     hover:border-b-2 hover:border-b-[#B2A5FF] hover:bg-transparent`
                 }
-                
-                
+
+
 
 
             >
@@ -52,7 +48,7 @@ const Header = () => {
             <NavLink
                 to="/find-tutors"
                 className={({ isActive }) =>
-                    `btn border-transparent text-[15px] shadow-none rounded-md ${isActive  
+                    `btn border-transparent text-sm shadow-none rounded-md ${isActive
                         ? 'border-b-4 border-b-[#B2A5FF] text-black bg-transparent'
                         : 'bg-transparent text-black border-b-2 border-transparent'
                     } 
@@ -66,61 +62,79 @@ const Header = () => {
         </li>
 
         {
-            user &&
-            <div className='lg:flex items-center'>
-                <li>
-                    <NavLink
-                        to="/add-tutorials"
-                        className={({ isActive }) =>
-                            `btn border-transparent text-[15px] shadow-none rounded-md ${isActive  
-                                ? 'border-b-4 border-b-[#B2A5FF] text-black bg-transparent'
-                                : 'bg-transparent text-black border-b-2 border-transparent'
-                            } 
+            user && (
+                <div className="dropdown dropdown-end">
+                    <div tabIndex={0} role="button" className="btn border-transparent bg-transparent  hover:bg-transparent hover:border-transparent text-black">
+                        Admin Routes
+                    </div>
+                    <ul tabIndex={0} className="menu dropdown-content bg-[#F2F6FD] rounded-md mt-3 w-52 p-2 shadow">
+                        <li>
+                            <NavLink
+                                to="/add-tutorials"
+                                className={({ isActive }) =>
+                                    `btn border-transparent text-sm shadow-none rounded-md ${isActive
+                                        ? 'border-b-4 border-b-[#B2A5FF] text-black bg-transparent'
+                                        : 'bg-transparent text-black border-b-2 border-transparent'
+                                    } 
                             hover:border-transparent
                             hover:border-b-2 hover:border-b-[#B2A5FF] hover:bg-transparent`
-                        }
-                        
-                        >
-                        Add Tutorials
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink
-                        to="/my-tutorials"
-                        className={({ isActive }) =>
-                            `btn border-transparent text-[15px] shadow-none rounded-md ${isActive  
-                                ? 'border-b-4 border-b-[#B2A5FF] text-black bg-transparent'
-                                : 'bg-transparent text-black border-b-2 border-transparent'
-                            } 
+                                }
+                            >
+                                Add Tutorials
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/my-tutorials"
+                                className={({ isActive }) =>
+                                    `btn border-transparent text-sm shadow-none rounded-md ${isActive
+                                        ? 'border-b-4 border-b-[#B2A5FF] text-black bg-transparent'
+                                        : 'bg-transparent text-black border-b-2 border-transparent'
+                                    } 
                             hover:border-transparent
                             hover:border-b-2 hover:border-b-[#B2A5FF] hover:bg-transparent`
-                        }
-                        
-                        >
-                        My Tutorials
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink
-                        to="/myBooked-tutors"
-                        className={({ isActive }) =>
-                            `btn border-transparent text-[15px] shadow-none rounded-md ${isActive  
-                                ? 'border-b-4 border-b-[#B2A5FF] text-black bg-transparent'
-                                : 'bg-transparent text-black border-b-2 border-transparent'
-                            } 
+                                }
+                            >
+                                My Tutorials
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                to="/myBooked-tutors"
+                                className={({ isActive }) =>
+                                    `btn border-transparent text-sm shadow-none rounded-md ${isActive
+                                        ? 'border-b-4 border-b-[#B2A5FF] text-black bg-transparent'
+                                        : 'bg-transparent text-black border-b-2 border-transparent'
+                                    } 
                             hover:border-transparent
                             hover:border-b-2 hover:border-b-[#B2A5FF] hover:bg-transparent`
-                        }
-                        
-                        >
-                        My Booked Tutors
-                    </NavLink>
-                </li>
-
-            </div>
+                                }
+                            >
+                                My Booked Tutors
+                            </NavLink>
+                        </li>
+                    </ul>
+                </div>
+            )
         }
 
+        {/* contact use page link */}
+        <li>
+            <NavLink
+                to="/contact-us"
+                className={({ isActive }) =>
+                    `btn border-transparent text-sm shadow-none rounded-md ${isActive
+                        ? 'border-b-4 border-b-[#B2A5FF] text-black bg-transparent'
+                        : 'bg-transparent text-black border-b-2 border-transparent'
+                    } 
+                    hover:border-transparent
+                    hover:border-b-2 hover:border-b-[#B2A5FF] hover:bg-transparent`
+                }
 
+            >
+                Contact Us
+            </NavLink>
+        </li>
 
     </>
 
@@ -194,7 +208,7 @@ const Header = () => {
                             </div>
                         }
                         {
-                            user?.email ? <Link onClick={() => { userLogOut() }}  className='btn bg-transparent border-[#9285E1] shadow-lg hover:bg-transparent '>Logout</Link> : <Link to={'/login'} className='btn bg-transparent border-[#9285E1] shadow-lg hover:bg-transparent '><FaArrowRightToBracket /> Login</Link>
+                            user?.email ? <Link onClick={() => { userLogOut() }} className='btn bg-transparent border-[#9285E1] shadow-lg hover:bg-transparent text-black'><FaArrowRightToBracket /> Logout</Link> : <Link to={'/login'} className='btn bg-transparent border-[#9285E1] shadow-lg hover:bg-transparent text-black'><FaArrowRightToBracket /> Login</Link>
                         }
 
                     </div>

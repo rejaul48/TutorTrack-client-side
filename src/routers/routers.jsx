@@ -14,6 +14,7 @@ import Login from "../pages/Login/Login";
 import PrivetRoute from "./PrivetRoute";
 import axios from "axios";
 import TutorFindWithLanguage from "../pages/TutorFindWithLanguage/TutorFindWithLanguage";
+import ContactUs from "../pages/ContactUs/ContactUs";
 
 const routers = createBrowserRouter([
 
@@ -46,6 +47,10 @@ const routers = createBrowserRouter([
                 element: <PrivetRoute >
                     <MyBookedTutors ></MyBookedTutors>
                 </PrivetRoute>
+            },
+            {
+                path: 'contact-us',
+                element: <ContactUs ></ContactUs>
             },
             {
                 path: 'tutor/details/:id',
