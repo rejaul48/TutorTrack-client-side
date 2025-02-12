@@ -74,8 +74,8 @@ const TutorDetails = () => {
                         <h2 className='text-4xl lg:text-4xl font-bold'>{detailsData?.name}</h2>
                         <p>Super Tutor</p>
                         <p className='text-lg lg:text-lg my-1'>Origin-language: {detailsData?.language}</p>
-                        <h2 className='text-2xl bg-pink-500 w-6/12 md:4/12 xl:w-3/12 px-2 rounded-md py-2'>Price: $<span className='lg:text-2xl font-semibold'>{detailsData?.price}</span></h2>
-                        <p className='flex items-center gap-1 py-1'><FaLanguage className='text-lg'></FaLanguage> Language: {detailsData?.language}</p>
+                        <h2 className='text-2xl bg-[#B2A5FF] w-6/12 md:4/12 xl:w-3/12 px-2 rounded-md py-2'>Price: $<span className='lg:text-2xl font-semibold'>{detailsData?.price}</span></h2>
+                        <p className='flex items-center gap-1 py-1'><FaLanguage className='text-lg'></FaLanguage>{detailsData?.language}</p>
                         <p className='flex items-center gap-1 text-lg'><FaUser className='text-xl'></FaUser> <span>46</span>Active Students</p>
                         <p className='flex items-center gap-1 py-1'><FaVideo className='text-xl'></FaVideo> <span>4600 </span>Lesson</p>
 
@@ -91,8 +91,8 @@ const TutorDetails = () => {
                         <div className="divider w-10/12"></div>
 
                         <div className='flex  gap-2'>
-                            <Link className='btn bg-orange-400 hover:bg-orange-500'>Book Trail lesson</Link>
-                            <Link onClick={() => { handleBookedTutor() }} className='btn bg-pink-700 hover:bg-pink-600'>Booked</Link>
+                            <Link className='btn bg-gradient-to-r from-[#493D9E] to-[#B2A5FF] text-white hover:bg-[#493D9E]'>Book Trail lesson</Link>
+                            <Link onClick={() => { handleBookedTutor() }} className='btn bg-[#493D9E] text-white hover:bg-[#493D9E] hover:bg-opacity-65'>Booked</Link>
                         </div>
 
                     </div>
